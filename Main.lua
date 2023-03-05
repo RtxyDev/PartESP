@@ -45,9 +45,10 @@ end
 --// Main
 
 
-function PartESP.AddESP(ObjectName,Object,TextSize,TextColor)
+function PartESP.AddESP(ObjectName,Object,ObjectPath,TextSize,TextColor)
 	local PartTable = {
 		Name = Object.Name,
+		OldPath = Object:GetFullName()
 		ESP = Drawingnew("Text"),
 		Connections = {}
 	}
@@ -90,10 +91,11 @@ function PartESP.AddESP(ObjectName,Object,TextSize,TextColor)
 			PartTable.ESP.Visible = false
 		end
 
-		if not Object then
+		if Object:GetFullName() ~= PartTable.OldPath then
 			print("Part Gone")
 			PartTable.Connections.ESP:Disconnect()
 			PartTable.ESP:Remove()
+		
 		end
 	end)
 
