@@ -45,10 +45,10 @@ end
 --// Main
 
 
-function PartESP.AddESP(ObjectName,Object,ObjectPath,TextSize,TextColor)
+function PartESP.AddESP(ObjectName,Object,TextSize,TextColor)
 	local PartTable = {
 		Name = Object.Name,
-		OldPath = Object:GetFullName()
+		OldPath = Object:GetFullName(),
 		ESP = Drawingnew("Text"),
 		Connections = {}
 	}
