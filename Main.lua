@@ -92,13 +92,15 @@ function PartESP.AddESP(ObjectName,Object,TextSize,TextColor)
 		end
 
 		if Object:GetFullName() ~= PartTable.OldPath then
-			print("Part Gone")
 			PartTable.Connections.ESP:Disconnect()
 			PartTable.ESP:Remove()
 		
 		end
+
 	end)
 
 end
+
+
 return PartESP
 
