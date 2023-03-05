@@ -45,9 +45,9 @@ end
 --// Main
 
 
-function PartESP.AddESP(Name,Object,Size)
+function PartESP.AddESP(ObjectName,Object,TextSize,TextColor)
 	local PartTable = {
-		Name = Name,
+		Name = Object.Name,
 		ESP = Drawingnew("Text"),
 		Connections = {}
 	}
@@ -61,10 +61,10 @@ function PartESP.AddESP(Name,Object,Size)
 
 				if PartTable.ESP.Visible then
 					PartTable.ESP.Center = true
-					PartTable.ESP.Size = Size or 14
+					PartTable.ESP.Size = TextSize or 14
 					PartTable.ESP.Outline = true
 					PartTable.ESP.OutlineColor = Color3.fromRGB(0, 0, 0)
-					PartTable.ESP.Color = Color3.fromRGB(255, 255, 255)
+					PartTable.ESP.Color = TextColor or Color3.fromRGB(255,255,255)
 					PartTable.ESP.Transparency = 0.5
 					PartTable.ESP.Font = Drawing.Fonts.UI
 
@@ -72,7 +72,7 @@ function PartESP.AddESP(Name,Object,Size)
 
 					local Parts, Content = {
 						Distance = "["..tostring(mathfloor(((Object.Position or Vector3zero) - (LocalPlayer.Character.HumanoidRootPart.Position or Vector3zero)).Magnitude)).."]",
-						Name = PartTable.Name
+						Name = ObjectName
 					}, ""
 
 
