@@ -91,7 +91,7 @@ function PartESP.AddESP(ObjectName,Object,TextSize,TextColor)
 			PartTable.ESP.Visible = false
 		end
 
-		if Object:GetFullName() ~= PartTable.OldPath then
+		if Object:GetFullName() ~= PartTable.OldPath or not Object then
 			PartTable.Connections.ESP:Disconnect()
 			PartTable.ESP:Remove()
 		
