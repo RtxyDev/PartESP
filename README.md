@@ -10,9 +10,10 @@ big thanks to [https://github.com/Exunys](Exunys)
 ```lua
 local PartESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/RtxyDev/PartESP/main/Main.lua"))()
 PartESP.AddESP(
-    "Epic Chest", -- Part Name
-    workspace.Part, -- Part Path
-    30, -- Text Size
-    Color3.fromRGB(115, 62, 165) -- Text Color
+	"Epic Chest",                -- Part Name
+	workspace.Part,              -- Part Path
+	30,                          -- Text Size
+	Color3.fromRGB(115, 62, 165) -- Text Color
 )
+
 ```
