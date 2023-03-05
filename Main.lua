@@ -91,6 +91,7 @@ function PartESP.AddESP(ObjectName,Object,TextSize,TextColor)
 		end
 
 		if not Object then
+			print("Part Gone")
 			PartTable.Connections.ESP:Disconnect()
 			PartTable.ESP:Remove()
 		end
