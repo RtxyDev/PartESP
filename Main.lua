@@ -45,9 +45,9 @@ end
 --// Main
 
 
-function PartESP.AddESP(Object,Size)
+function PartESP.AddESP(Name,Object,Size)
 	local PartTable = {
-		Name = Object.Name,
+		Name = Name,
 		ESP = Drawingnew("Text"),
 		Connections = {}
 	}
@@ -72,7 +72,7 @@ function PartESP.AddESP(Object,Size)
 
 					local Parts, Content = {
 						Distance = "["..tostring(mathfloor(((Object.Position or Vector3zero) - (LocalPlayer.Character.HumanoidRootPart.Position or Vector3zero)).Magnitude)).."]",
-						Name = Object.Name
+						Name = PartTable.Name
 					}, ""
 
 
