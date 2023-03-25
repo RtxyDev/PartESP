@@ -26,14 +26,6 @@ local Camera = workspace.CurrentCamera
 
 --// Environment
 
-local CrosshairParts, WrappedPlayers = {
-	LeftLine = Drawingnew("Line"),
-	RightLine = Drawingnew("Line"),
-	TopLine = Drawingnew("Line"),
-	BottomLine = Drawingnew("Line"),
-	CenterDot = Drawingnew("Circle")
-}, {}
-
 --// Core Functions
 
 WorldToViewportPoint = function(...)
